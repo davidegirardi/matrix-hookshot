@@ -6,10 +6,10 @@ window.addEventListener("load", () => {
     const currentVersion = window.HOOKSHOT_VERSION || 'latest';
 
     const selectElement = document.createElement("select");
-    
+
     fetch("https://api.github.com/repos/matrix-org/matrix-hookshot/releases", {
         cache: "force-cache",
-    }).then(res => 
+    }).then(res =>
         res.json()
     ).then(releases => {
         selectElement.innerHTML = "";
@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
     }).catch(ex => {
         console.error("Failed to fetch version data", ex);
     })
-    
+
     const option = document.createElement("option");
     option.innerHTML = 'loading...';
     selectElement.add(option);
