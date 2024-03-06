@@ -4,6 +4,8 @@ name: "Docker Hub - Latest"
 
 on:
   push:
+    # Remove me before PR
+    branches: [ main ]
     paths-ignore:
       - changelog.d/**'
   pull_request:
