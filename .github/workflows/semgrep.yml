@@ -7,7 +7,7 @@ on:
   workflow_dispatch: {}
   # Scan mainline branch and report all findings:
   push:
-    branches: ["main", "dg/add-semgrep"]
+    branches: ["main", "dg/add-semgrep", "dg/test-semgrep-and-fixes"]
 
 jobs:
   semgrep:
